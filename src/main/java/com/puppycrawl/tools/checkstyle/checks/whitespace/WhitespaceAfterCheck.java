@@ -80,6 +80,7 @@ public class WhitespaceAfterCheck
             TokenTypes.COMMA,
             TokenTypes.SEMI,
             TokenTypes.TYPECAST,
+            TokenTypes.GENERIC_END,
         };
     }
 

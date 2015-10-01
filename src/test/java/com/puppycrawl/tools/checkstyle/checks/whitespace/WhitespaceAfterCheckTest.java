@@ -84,6 +84,8 @@ public class WhitespaceAfterCheckTest
     @Test
     public void testTypeArgumentAndParameterCommas() throws Exception {
         final String[] expected = {
+            "6:54: " + getCheckMessage(WS_NOT_FOLLOWED, ">"),
+            "6:118: " + getCheckMessage(WS_NOT_FOLLOWED, ">"),
             "11:21: " + getCheckMessage(WS_NOT_FOLLOWED, ","),
             "11:23: " + getCheckMessage(WS_NOT_FOLLOWED, ","),
             "11:41: " + getCheckMessage(WS_NOT_FOLLOWED, ","),
@@ -93,7 +95,10 @@ public class WhitespaceAfterCheckTest
 
     @Test
     public void test1322879() throws Exception {
-        final String[] expected = ArrayUtils.EMPTY_STRING_ARRAY;
+        final String[] expected = {
+            "26:17: " + getCheckMessage(WS_NOT_FOLLOWED, ">"),
+            "30:17: " + getCheckMessage(WS_NOT_FOLLOWED, ">"),
+        };
         verify(checkConfig, getPath("whitespace/InputWhitespaceAround.java"),
                expected);
     }
